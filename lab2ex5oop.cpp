@@ -6,19 +6,24 @@ using namespace std;
     int a,b;
     }p;
 
-    void Module(nrComplex p){
+    float Module(nrComplex p){
         float module;
-        cin>>p.a;
-        cin>>p.b;
         if(p.b==0)
-            module=p.a;
+            if(p.a>0)
+                module=p.a;
+            else
+                module=p.a*(-1);
         else
             module=sqrt(p.a*p.a+p.b*p.b);
 
-        cout<<module<<endl;
+        return module;
     }
 
 int main(){
 
-    Module(p);
+    cin>>p.a;
+    cin>>p.b;
+    float x;
+    x=Module(p);
+    cout<<x;
 }
