@@ -8,13 +8,16 @@ using namespace std;
     int nota;
     }x,y;
 
-    void Max(Student i, Student j){
+    Student Max(Student i, Student j){
+        Student f;
+        f.nume="test";
+        f.nota=0;
         if(i.nota<j.nota)
-            cout<<"Studentul cu nota maxima este "<<j.nume<<endl;
+            return j;
         else
             if(i.nota>j.nota)
-                cout<<"Studentul cu nota maxima este "<<i.nume<<endl;
-            else cout<<"Studentii au note egale."<<endl;
+                return i;
+            else return f;
 }
 
 int main(){
@@ -31,5 +34,8 @@ int main(){
     cout<<"Nota studentului "<<y.nume<<" este ";
     cin>>y.nota;
     cout<<endl;
-    Max(x,y);
+    if(Max(x,y).nota!=0)
+        cout<<Max(x,y).nume<<" "<<Max(x,y).nota;
+    else
+        cout<<"Studentii au note egale";
 }
