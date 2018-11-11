@@ -4,28 +4,31 @@
 using namespace std;
 template <typename T>
 T Max(T a, T b, T c){
+    T max;
     if(a>=b&&a>=c)
-        cout<<a<<endl;
+        max=a;
     else
         if(b>=a&&b>=c)
-            cout<<b<<endl;
+            max=b;
         else
             if(c>=a&&c>=b)
-                cout<<c<<endl;
+                max=c;
+
+    return max;
 
 }
 int main(){
 int v=1;
-int f=1;
+int f=2;
 int e=1;
-Max(v,f,e);
+cout<<Max(v,f,e)<<endl;
 char *a,*b,*c;
 a="alina";
 b="cristina";
 c="costel";
-Max(a,b,c);
+cout<<Max(a,b,c)<<endl;
 double q=12;
 double w=14;
 double r=1;
-Max(q,w,r);
+cout<<Max(q,w,r)<<endl;
 }
