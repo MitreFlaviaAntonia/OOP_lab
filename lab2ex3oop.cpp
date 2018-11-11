@@ -6,16 +6,16 @@ using namespace std;
 struct Variaza{
     int numar;
     }x;
-void return_length(int x){
+int return_length(int x){
     cout<<sizeof(x);
 }
-void return_length(double x){
+int return_length(double x){
     cout<<sizeof(x);
 }
-void return_length(char *x){
-    cout<<sizeof(x);
+int return_length(char *x){
+    cout<<strlen(x);
 }
-void return_length(Variaza x){
+int return_length(Variaza x){
     cout<<sizeof(x.numar);
 }
 
@@ -23,7 +23,7 @@ int main(){
     int a=45;
     return_length(a);
     cout<<endl;
-    double b=45;
+    double b=45.8;
     return_length(b);
     cout<<endl;
     char *c="Alin";
