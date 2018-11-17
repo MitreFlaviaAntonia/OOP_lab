@@ -3,7 +3,7 @@
 #include <stdlib.h>
 using namespace std;
 
-struct Variaza{
+struct Lungimea{
     int numar;
     }x;
 int return_length(int x){
@@ -15,7 +15,7 @@ int return_length(double x){
 int return_length(char *x){
     cout<<strlen(x);
 }
-int return_length(Variaza x){
+int return_length(Lungimea x){
     cout<<sizeof(x.numar);
 }
 

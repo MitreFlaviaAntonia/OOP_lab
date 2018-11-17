@@ -12,34 +12,45 @@ char f(int num){
         num /= 2;
     }
 
-    cout<<bin%100000000<<endl;
+    return (bin%100000000);
 }
-/*char f(double nr){
-    double bin = 0;
-    int k = 1;
-
-    while (nr)
-    {
-        bin = bin + (nr % 2) * k;
-        k = k * 10;
-        nr /= 2;
+char f(double pi){
+    double pi2=pi;
+    int x;
+    char r;
+    x=pi2;
+    int counter = 0;
+    for (; pi2 != x; counter++){
+        pi2 *= 10;
+        x=pi2;
     }
-    cout<<bin%100000000<<endl;
 
-}*/
+int bin = 0, k = 1;
+
+    while (x)
+    {
+        bin += (x % 2) * k;
+        k *= 10;
+        x /= 2;
+    }
+
+    return (bin%100000000);
+}
 
 char f(char *num){
     int pos;
     pos=strlen(num)-1;
-    cout<<num[pos]<<endl;
+    return num[pos];
 }
 
 int main(){
-    int a=450;
-    f(a);
-    double b=456;
-    //cout<<f(b)<<endl;
+    int a;
+    cin>>a;
+    cout<<f(a)<<endl;
+    double b;
+    cin>>b;
+    cout<<f(b)<<endl;
     char *c="oriunde";
-    f(c);
+    cout<<f(c)<<endl;
 
 }

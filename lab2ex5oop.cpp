@@ -23,7 +23,6 @@ int main(){
 
     cin>>p.a;
     cin>>p.b;
-    float x;
-    x=Module(p);
-    cout<<x;
+    cout<<Module(p);
+
 }

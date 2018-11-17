@@ -3,17 +3,21 @@
 #include <sstream>
 using namespace std;
 template <typename T>
-T Interchange(T a, T b, T aux){
+void Interchange(T&x, T&y){
+T aux;
 
-aux=a;
-a=b;
-b=aux;
-cout<<a<<" "<<b;
+aux=x;
+x=y;
+y=aux;//modif var in fct
+
 }
+
 
 int main(){
 
-int x=2;int y=4;int z=0;
-Interchange(x,y,z);
+int x=2;
+int y=4;
 
+Interchange(x,y);
+cout<<x<<" "<<y;
 }

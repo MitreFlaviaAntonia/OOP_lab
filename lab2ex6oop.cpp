@@ -1,6 +1,6 @@
 #include<iostream>
-#include <string.h>
-#include <sstream>
+#include<string.h>
+#include<sstream>
 using namespace std;
 template <typename T>
 T Max(T a, T b, T c){
