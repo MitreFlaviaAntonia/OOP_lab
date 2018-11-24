@@ -15,7 +15,8 @@ public:
 	}
 
     ~Student() {	// destuctor
-	cout << "Instance destroyed !"<<endl;;}
+	cout << "Instance destroyed !"<<endl;
+	;}
 
 	void setNota(int a) //setter
         {
@@ -45,6 +46,7 @@ int main(){
 	student2 = new Student(10);
 	student1.setNota(5);
 	student1.setNume("adina");
+	student2->setNume("alina");
 	cout<<student1.getNume()<<endl;
-
+    cout<<student2->getNume()<<endl;
 }

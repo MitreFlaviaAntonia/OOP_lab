@@ -13,7 +13,7 @@ private:
     node *head,*tail;
 
 public:
-    int countStudents=0;
+    static int countStudents;
     Student_list()
     {
         head = NULL;
@@ -87,7 +87,7 @@ public:
 
 
 };
-
+int Student_list::countStudents=0;
 
 int main()
 {
@@ -99,6 +99,9 @@ int main()
     a.add_node(3);
     a.add_node(4);
     a.add_node(5);
+    cout<<endl<<"Nr studenti: "<<Student_list::countStudents<<endl;
+    Student_list x;
+    cout<<endl<<"Nr studenti: "<<x.countStudents<<endl;
     cout<<endl;
     a.display();
     cout<<endl;

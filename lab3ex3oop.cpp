@@ -5,29 +5,31 @@ using namespace std;
 class Student {
     public:
         static int objectCount;
-        int somevalue;
+        int nrStudent;
 
-        Student(int l = 2) {
+        Student(int nr = 2) {
 
-            cout <<"Constructor called. "<<++objectCount<<endl;
-            somevalue = l;
+            cout << "Constructor called. Nr objects:"<<++objectCount<< endl <<endl;
+            nrStudent = nr;
 
         }
 
         ~Student(){
-            cout<<"Destructor called. "<<--objectCount<<endl;
+            cout << "Destructor called. Nr objects:"<<--objectCount<< endl << endl;
         }
 
 };
 
-int Student::objectCount = 0;
+int Student::objectCount=0; //o variabila statica dintr-o clasa se initializeaza inafara clasei
 
-int main(void) {
-   Student Student1(3);
-   Student Student2(8);
+int main() {
+    Student Student1(3);
+    Student Student2(8);
+    cout << "Total objects: " << Student::objectCount << endl << endl;
 
-   cout << "Total objects: " << Student::objectCount << endl;
+    Student x;
+    cout << "Total objects: " << x.objectCount << endl <<endl;
 
-   return 0;
+    return 0;
 }
 
