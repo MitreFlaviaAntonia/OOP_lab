@@ -16,17 +16,14 @@ private:
 
         cout << "constructor of Student\n";
     }
-    class Mata{
+
         friend class StudentFriend;
-    };
-
-
 };
 
 class StudentFriend{
 public:
     StudentFriend(){
-        Mata a;
+        Student a;
         cout << "constructor of StudentFriend\n";
     }
 };
