@@ -7,10 +7,10 @@ class Student {
         static int objectCount;
         int nrStudent;
 
-        Student(int nr = 2) {
+        Student() {
 
             cout << "Constructor called. Nr objects:"<<++objectCount<< endl <<endl;
-            nrStudent = nr;
+
 
         }
 
@@ -23,10 +23,10 @@ class Student {
 int Student::objectCount=0; //o variabila statica dintr-o clasa se initializeaza inafara clasei
 
 int main() {
-    Student Student1(3);
-    Student Student2(8);
+    Student Student1;
+    Student Student2;
     cout << "Total objects: " << Student::objectCount << endl << endl;
-
+    Student *r = new Student(3);
     Student x;
     cout << "Total objects: " << x.objectCount << endl <<endl;
 
